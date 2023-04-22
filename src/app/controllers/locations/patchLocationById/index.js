@@ -17,7 +17,7 @@ const modifyLocationById = require("~root/actions/locations/modifyLocationById")
       });
   
       res.status(201).send({
-        song,
+        location,
       });
     } catch (err) {
       handleAPIError(res, err);
