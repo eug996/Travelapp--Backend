@@ -1,7 +1,7 @@
 
 const { submitQuery, sql, sqlReduce } = require("~root/lib/database");
 
-const updateLocationById = ({ locationId, places = null, name = null, country = null, description=null, photo = null }) => {
+const updateLocationById = ({ locationId,  name = null, country = null, description=null, photo = null }) => {
     const update = [];
 
     if (name !== null) {
