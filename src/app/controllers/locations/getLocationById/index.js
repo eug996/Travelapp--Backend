@@ -4,6 +4,7 @@ const fetchLocationById = require("~root/actions/locations/fetchLocationById");
 
 const getLocationById = async (req, res) => {
     const{locationId} = req.params;
+    console.log(locationId);
   try {
     const { location } = await fetchLocationById({locationId});
 

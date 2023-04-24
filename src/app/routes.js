@@ -13,6 +13,7 @@ const getLocationById=require("./controllers/locations/getLocationById");
 const deleteLocationById=require("./controllers/locations/deleteLocationById");
 const patchLocationById=require("./controllers/locations/patchLocationById");
 const postLocation= require("./controllers/locations/postLocation");
+const getLocationByName= require("./controllers/locations/getLocationByName")
 
 const router = express.Router();
 
@@ -28,10 +29,13 @@ router.put("/edit/user", authentication, putUserDetails);
 
 router.get("/user-types", getUserTypes);
 
-router.get("/locations", getAllLocations);
+router.get("/locations/search",getLocationByName);
+
 router.get("/locations/:locationId", getLocationById);
 router.delete("/locations/:locationId", deleteLocationById);
 router.patch("/locations/:locationId",patchLocationById);
+router.get("/locations", getAllLocations);
 router.post("/locations", postLocation);
+
 
 module.exports = router;
